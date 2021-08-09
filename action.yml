@@ -14,12 +14,12 @@ runs:
       shell: bash
     - run: docker-compose up
       env:
-        DATABASE_ROOT_USERNAME=postgres
-        DATABASE_ROOT_PASSWORD=postgres
-        DATABASE_USERNAME=postgres
-        DATABASE_PASSWORD=postgres
-        FUSIONAUTH_APP_MEMORY=512M
-        FUSIONAUTH_APP_RUNTIME_MODE=development
-        FUSIONAUTH_APP_KICKSTART_FILE=/usr/local/fusionauth/kickstart/kickstart.json -e 
-        SEARCH_TYPE=database
+        DATABASE_ROOT_USERNAME: postgres
+        DATABASE_ROOT_PASSWORD: postgres
+        DATABASE_USERNAME: postgres
+        DATABASE_PASSWORD: postgres
+        FUSIONAUTH_APP_MEMORY: 512M
+        FUSIONAUTH_APP_RUNTIME_MODE: development
+        FUSIONAUTH_APP_KICKSTART_FILE: usr/local/fusionauth/kickstart/kickstart.json -e 
+        SEARCH_TYPE: database
       shell: bash
