@@ -12,8 +12,14 @@ runs:
   steps: 
     - run: echo Hello ${{ inputs.kickstart-file-name }}.
       shell: bash
-    - id: random-number-generator
-      run: echo "::set-output name=random-id::$(echo $RANDOM)"
-      shell: bash
     - run: docker-compose up
+      env:
+        DATABASE_ROOT_USERNAME=postgres
+        DATABASE_ROOT_PASSWORD=postgres
+        DATABASE_USERNAME=postgres
+        DATABASE_PASSWORD=postgres
+        FUSIONAUTH_APP_MEMORY=512M
+        FUSIONAUTH_APP_RUNTIME_MODE=development
+        FUSIONAUTH_APP_KICKSTART_FILE=/usr/local/fusionauth/kickstart/kickstart.json -e 
+        SEARCH_TYPE=database
       shell: bash
