@@ -12,7 +12,7 @@ runs:
   steps: 
     - run: echo Hello ${{ inputs.kickstart-file-name }}.
       shell: bash
-    - run: docker-compose up
+    - run: docker-compose up -d
       env:
         DATABASE_ROOT_USERNAME: postgres
         DATABASE_ROOT_PASSWORD: postgres
